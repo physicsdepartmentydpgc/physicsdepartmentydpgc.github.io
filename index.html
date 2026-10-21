@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Department of Physics and Mathematics | Y. D. P. G. College, Lakhimpur Kheri</title>
+<meta name="description" content="Department of Physics and Mathematics, Yuveraj Dutta Postgraduate College, Lakhimpur Kheri. Study material, assignments and notices for B.Sc. students.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%2314213D'/%3E%3Cpath d='M6 22 C 11 8, 15 8, 20 20 S 29 32, 34 16' fill='none' stroke='%23F2B48C' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D; --paper:#F6F6F2; --card:#FFFFFF; --line:#DCDDD6; --line-soft:#ECEDE7;
+    --muted:#4B5263; --accent:#B23A06; --peach:#F2B48C;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 'IBM Plex Sans',system-ui,sans-serif}
+  a{color:var(--ink);text-decoration:none}
+  a:hover{color:var(--accent)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* Header */
+  header.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand b{display:block;font-family:'Space Grotesk',sans-serif;font-size:17px;line-height:1.2}
+  .brand small{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+  nav.main{display:flex;flex-wrap:wrap;gap:0 20px;font-weight:500;font-size:15px}
+  nav.main a{padding:10px 0}
+
+  /* Hero */
+  .hero{background-color:var(--ink);background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:32px 32px;color:#fff}
+  .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:48px;padding-top:72px;padding-bottom:96px}
+  .hero-text{flex:1 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px}
+  .eyebrow{margin:0;font-family:'IBM Plex Mono',monospace;font-size:14px;letter-spacing:.06em;color:var(--peach)}
+  .hero h1{margin:0;font-size:clamp(34px,5vw,60px);line-height:1.08;letter-spacing:-.01em}
+  .hero p.lead{margin:0;font-size:19px;color:#D9DDE6;max-width:560px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:8px;font-weight:600}
+  .btn.solid{background:var(--peach);color:var(--ink)}
+  .btn.solid:hover{background:#F6C7A8;color:var(--ink)}
+  .btn.ghost{border:1.5px solid #fff;color:#fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.1);color:#fff}
+  .hero-art{flex:1 1 320px;min-width:0;display:flex;justify-content:center}
+
+  /* Tiles */
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:-44px}
+  .tile{display:flex;flex-direction:column;gap:8px;padding:24px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 6px rgba(20,33,61,.06);transition:transform .15s,box-shadow .15s}
+  .tile:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(20,33,61,.1)}
+  .tile b{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600}
+  .tile span{font-size:15px;color:var(--muted)}
+
+  /* Sections */
+  section.block{padding-top:88px}
+  .head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:24px}
+  .head h2{margin:0;font-size:30px;font-weight:700}
+  .head p{margin:6px 0 0;color:var(--muted)}
+  .more{font-weight:600;color:var(--accent)}
+
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line-soft)}
+  .panel-head h3{margin:0;font-size:20px;font-weight:600}
+  .panel iframe{display:block;width:100%;height:340px;border:0;background:#fff}
+  .panel-foot{padding:12px 20px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--muted)}
+
+  .subject{display:flex;flex-direction:column;gap:14px;padding:28px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .subject h3{margin:0;font-size:24px;font-weight:600}
+  .subject p{margin:0;color:var(--muted)}
+  .chip{display:inline-block;padding:3px 12px;border-radius:999px;background:#F1F1EC;color:#2E3443;font-size:14px;margin:0 6px 6px 0}
+
+  .soon{display:flex;align-items:center;gap:16px;padding:28px;background:var(--card);border:1px dashed #B9BBB1;border-radius:12px;color:var(--muted)}
+
+  /* Faculty */
+  .faculty{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .person{display:flex;flex-direction:column;gap:14px;padding:28px 24px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .mono-av{width:72px;height:72px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:24px}
+  .person h3{margin:0;font-size:21px;font-weight:600;line-height:1.3}
+  .person .role{margin:2px 0 0;font-size:15px;color:#2E3443}
+  .person .qual{margin:0;padding-top:12px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--muted)}
+
+  /* Footer */
+  footer{margin-top:96px;background:var(--ink);color:#D9DDE6}
+  footer .cols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;padding-top:56px;padding-bottom:32px}
+  footer .col{flex:1 1 240px;display:flex;flex-direction:column;gap:6px}
+  footer .col.wide{flex-basis:320px}
+  footer .label{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.06em;color:var(--peach);margin-bottom:4px}
+  footer a{color:#fff}
+  footer a:hover{color:var(--peach)}
+  footer .base{padding-top:20px;padding-bottom:32px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;color:#B9C0CF}
+
+  @media (max-width:640px){
+    header.top{position:static}
+    .hero .wrap{padding-top:48px}
+    .two{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#14213D" stroke-width="1.8"><rect x="1" y="1" width="38" height="38" rx="8"/><path d="M6 24 C 11 10, 15 10, 20 20 S 29 30, 34 16" stroke="#B23A06"/><path d="M6 32 H34 M8 8 V34"/></svg>
+      <span><b>Physics &amp; Mathematics</b><small>Y. D. P. G. College, Lakhimpur Kheri</small></span>
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#notices">Notices</a>
+      <a href="#material">Study Material</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#videos">Videos</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow">AFFILIATED TO THE UNIVERSITY OF LUCKNOW</p>
+        <h1>Department of Physics and Mathematics</h1>
+        <p class="lead">Yuveraj Dutta Postgraduate College, Lakhimpur Kheri. We teach Physics and Mathematics to B.Sc. students. Notes, assignments and notices all live here.</p>
+        <div class="btns">
+          <a class="btn solid" href="#material">Browse study material</a>
+          <a class="btn ghost" href="#notices">Latest notices</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 360 280" width="100%" style="max-width:420px" role="img" aria-label="A damped wave drawn on coordinate axes">
+          <g stroke="rgba(255,255,255,0.55)" stroke-width="1.5" fill="none">
+            <path d="M30 250 H340"/><path d="M40 260 V20"/>
+            <path d="M334 245 L340 250 L334 255"/><path d="M35 26 L40 20 L45 26"/>
+          </g>
+          <path d="M40 140 C 60 30, 80 30, 100 140 S 140 220, 160 140 S 195 85, 210 140 S 238 175, 250 140 S 272 118, 282 140 S 300 154, 308 140 S 322 133, 330 140" fill="none" stroke="#F2B48C" stroke-width="3" stroke-linecap="round"/>
+          <path d="M40 60 C 120 80, 220 115, 330 132" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <path d="M40 220 C 120 200, 220 165, 330 148" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-dasharray="5 6"/>
+          <text x="300" y="275" fill="rgba(255,255,255,0.8)" font-family="IBM Plex Mono, monospace" font-size="14">t</text>
+          <text x="52" y="30" fill="rgba(255,255,255,0.8)" font-family="IBM Plex Mono, monospace" font-size="14">x(t)</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="tiles" aria-label="Quick access">
+      <a class="tile" href="#material">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#B23A06" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5M8 13h8M8 17h6"/></svg>
+        <b>Study Material</b><span>Lecture notes and readings for Physics and Mathematics.</span>
+      </a>
+      <a class="tile" href="#assignments">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#B23A06" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6v3H9z"/><path d="M7 5H5v16h14V5h-2"/><path d="M8.5 13l2.5 2.5 4.5-5"/></svg>
+        <b>Assignments</b><span>Problem sets to work on and submit.</span>
+      </a>
+      <a class="tile" href="#videos">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#B23A06" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
+        <b>Videos</b><span>Lectures and talks we recommend. Coming soon.</span>
+      </a>
+      <a class="tile" href="#notices">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#B23A06" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg>
+        <b>Notices</b><span>Exams, timetables, events and announcements.</span>
+      </a>
+    </nav>
+
+    <!-- Notices + Assignments: live lists from Google Drive -->
+    <section class="block" aria-label="Notices and assignments">
+      <div class="two">
+        <div class="panel" id="notices">
+          <div class="panel-head">
+            <h3>Notices</h3>
+            <a class="more" href="https://drive.google.com/drive/folders/1JG_K2MJjaKI9xtmRdMliFtHunJolG1Ir" target="_blank" rel="noopener">Open all →</a>
+          </div>
+          <iframe title="Notices folder" loading="lazy" src="https://drive.google.com/embeddedfolderview?id=1JG_K2MJjaKI9xtmRdMliFtHunJolG1Ir#list"></iframe>
+          <div class="panel-foot">Click a notice to open it. New notices appear here as soon as they are uploaded.</div>
+        </div>
+        <div class="panel" id="assignments">
+          <div class="panel-head">
+            <h3>Assignments</h3>
+            <a class="more" href="https://drive.google.com/drive/folders/11UAYLyT6h_4hM06QvIKaVBDOIZaMYxLw" target="_blank" rel="noopener">Open all →</a>
+          </div>
+          <iframe title="Assignments folder" loading="lazy" src="https://drive.google.com/embeddedfolderview?id=11UAYLyT6h_4hM06QvIKaVBDOIZaMYxLw#list"></iframe>
+          <div class="panel-foot">Check the due date written on each assignment.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study material -->
+    <section class="block" id="material">
+      <div class="head">
+        <div>
+          <h2>Study material</h2>
+          <p>Choose your subject. Inside, material is arranged by semester.</p>
+        </div>
+      </div>
+      <div class="two">
+        <div class="subject">
+          <h3>Physics</h3>
+          <p>Notes, readings and problem sheets for B.Sc. Physics.</p>
+          <div><span class="chip">Notes</span><span class="chip">Readings</span><span class="chip">Problem sheets</span></div>
+          <div><a class="btn solid" style="background:#14213D;color:#fff" href="https://drive.google.com/drive/folders/1pZKX_v24CfsHVuxPZ5QCdG4qwIYZJy7z" target="_blank" rel="noopener">Open Physics material →</a></div>
+        </div>
+        <div class="subject">
+          <h3>Mathematics</h3>
+          <p>Notes, readings and problem sheets for B.Sc. Mathematics.</p>
+          <div><span class="chip">Notes</span><span class="chip">Readings</span><span class="chip">Problem sheets</span></div>
+          <div><a class="btn solid" style="background:#14213D;color:#fff" href="https://drive.google.com/drive/folders/1u8AQHj234KPME_HZmJrwyxb1uzikSqET" target="_blank" rel="noopener">Open Mathematics material →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="block" id="videos">
+      <div class="head"><div><h2>Videos</h2></div></div>
+      <div class="soon">
+        <svg width="32" height="32" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#4B5263" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
+        <span>Videos coming soon: our own lectures, and good talks from elsewhere.</span>
+      </div>
+    </section>
+
+    <!-- Faculty: equal cards, alphabetical by surname -->
+    <section class="block" id="faculty">
+      <div class="head"><div><h2>Faculty</h2><p>Listed alphabetically by surname.</p></div></div>
+      <div class="faculty">
+        <article class="person">
+          <div class="mono-av" aria-hidden="true">MA</div>
+          <div><h3>Mohammad Amir</h3><p class="role">Assistant Professor, Department of Mathematics</p></div>
+          <p class="qual">M.Sc. (RU), M.Tech. (IIT Delhi)</p>
+        </article>
+        <article class="person">
+          <div class="mono-av" aria-hidden="true">BS</div>
+          <div><h3>Dr. Brijesh Shukla</h3><p class="role">Assistant Professor, Department of Physics</p></div>
+          <p class="qual">Ph.D. (HEP, LU)</p>
+        </article>
+        <article class="person">
+          <div class="mono-av" aria-hidden="true">AV</div>
+          <div><h3>Dr. Ajay Verma</h3><p class="role">Assistant Professor, Department of Physics</p></div>
+          <p class="qual">Ph.D. (Physics, NPL, New Delhi), Ph.D. (Engineering, RMIT, Australia)</p>
+        </article>
+        <article class="person">
+          <div class="mono-av" aria-hidden="true">IV</div>
+          <div><h3>Dr. Isht Vibhu</h3><p class="role">Associate Professor, Department of Physics</p></div>
+          <p class="qual">Ph.D. (LU)</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap cols">
+    <div class="col wide">
+      <span class="display" style="font-weight:700;font-size:20px;color:#fff">Department of Physics and Mathematics</span>
+      <span>Yuveraj Dutta Postgraduate College</span>
+      <span>Lakhimpur Kheri 262701, Uttar Pradesh</span>
+      <span>Affiliated to the University of Lucknow, Lucknow</span>
+    </div>
+    <div class="col">
+      <span class="label">LINKS</span>
+      <a href="https://ydpgcollege.co.in" target="_blank" rel="noopener">ydpgcollege.co.in</a>
+      <a href="#material">Study material</a>
+      <a href="#notices">Notices</a>
+    </div>
+    <div class="col">
+      <span class="label">CONTACT</span>
+      <a href="mailto:physicsdepartmentydpgc@gmail.com">physicsdepartmentydpgc@gmail.com</a>
+    </div>
+  </div>
+  <div class="wrap base">© 2026 Department of Physics and Mathematics, Y. D. P. G. College, Lakhimpur Kheri</div>
+</footer>
+
+</body>
+</html>
